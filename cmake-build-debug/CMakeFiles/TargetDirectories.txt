@@ -1,0 +1,3 @@
+C:/Users/uu/Desktop/curr/cmake-build-debug/CMakeFiles/curr.dir
+C:/Users/uu/Desktop/curr/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/uu/Desktop/curr/cmake-build-debug/CMakeFiles/rebuild_cache.dir

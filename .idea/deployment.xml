@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="xd_ub" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="ub (dac6cdeb-fe47-4ba9-9079-332ee0116bfb)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/tmp/tmp.4horwKsbPl" local="$PROJECT_DIR$" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug" />
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+      <paths name="xd_ub">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/root/wty/algo" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

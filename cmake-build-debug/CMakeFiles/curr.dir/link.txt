@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/curr.dir/main.cpp.o -o curr 
