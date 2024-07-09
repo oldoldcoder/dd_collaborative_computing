@@ -1,1 +1,0 @@
-/usr/bin/g++  -Wall -Wextra -g CMakeFiles/curr.dir/include/PHE.cpp.o CMakeFiles/curr.dir/include/SHE.cpp.o CMakeFiles/curr.dir/test/main.cpp.o -o curr  /usr/lib/aarch64-linux-gnu/libssl.so /usr/lib/aarch64-linux-gnu/libcrypto.so 
