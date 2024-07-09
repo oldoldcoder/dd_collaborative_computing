@@ -266,4 +266,13 @@ vector<Bin> split_PHE(vector<BIGNUM*> x, int k);
  */
 vector<BIGNUM*> frequency_PHE(vector<BIGNUM*> x, int k);
 
+/**
+ * @Method: 总控处理程序
+ * @param algoName 调用的算法名称
+ * @param fileString 读取数据的地址
+ * @param resultFilePath 输出数据的地址
+ * @return 状态码，1：成功；0：失败
+ */
+int deal(string algoName,string fileString,string resultFilePath);
+
 #endif //PHE_H

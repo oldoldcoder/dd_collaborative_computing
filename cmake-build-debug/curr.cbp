@@ -24,13 +24,14 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/tmp/tmp.4horwKsbPl/include"/>
+					<Add directory="/usr/include"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/aarch64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
 					<Add directory="/usr/lib/gcc/aarch64-linux-gnu/9/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/aarch64-linux-gnu"/>
-					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j96 -f &quot;/tmp/tmp.4horwKsbPl/cmake-build-debug/Makefile&quot;  VERBOSE=1 curr"/>
@@ -46,13 +47,14 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/tmp/tmp.4horwKsbPl/include"/>
+					<Add directory="/usr/include"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/aarch64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
 					<Add directory="/usr/lib/gcc/aarch64-linux-gnu/9/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/aarch64-linux-gnu"/>
-					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j96 -f &quot;/tmp/tmp.4horwKsbPl/cmake-build-debug/Makefile&quot;  VERBOSE=1 curr/fast"/>
@@ -82,7 +84,19 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/tmp/tmp.4horwKsbPl/main.cpp">
+		<Unit filename="/tmp/tmp.4horwKsbPl/include/PHE.cpp">
+			<Option target="curr"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.4horwKsbPl/include/PHE.h">
+			<Option target="curr"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.4horwKsbPl/include/SHE.cpp">
+			<Option target="curr"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.4horwKsbPl/include/SHE.h">
+			<Option target="curr"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.4horwKsbPl/test/main.cpp">
 			<Option target="curr"/>
 		</Unit>
 		<Unit filename="/tmp/tmp.4horwKsbPl/CMakeLists.txt">

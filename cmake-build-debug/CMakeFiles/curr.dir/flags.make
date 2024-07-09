@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/g++
 CXX_DEFINES = 
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -I/tmp/tmp.4horwKsbPl/include
 
-CXX_FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+CXX_FLAGS =  -Wall -Wextra -g -std=gnu++11 -fdiagnostics-color=always
 

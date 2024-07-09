@@ -357,7 +357,7 @@ void test_frequency_PHE() {
     BIGNUM* t = BN_new();
 
     // 插入数据
-    for (int i = 1; i < 100000; i++) {
+    for (int i = 1; i < 100; i++) {
         BN_set_word(t, i + i);
         x.push_back(BN_dup(t));
     }
@@ -375,6 +375,14 @@ void test_frequency_PHE() {
     printTime(start,"计算频率");
 }
 
+void test_deal() {
+    string algoName = "frequency";
+    string fileString = "/root/wty/data.txt";
+    string resultFilePath = "/root/wty/result.txt";
+
+    deal(algoName, fileString, resultFilePath);
+}
+
 int main() {
     // test_SHE();
     // test_PHE();
@@ -389,6 +397,7 @@ int main() {
     // test_distance_PHE();
     // test_bin_PHE();
     // test_frequency_PHE();
+    test_deal();
 
     return 0;
 }

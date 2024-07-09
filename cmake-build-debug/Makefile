@@ -129,29 +129,77 @@ curr/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/curr.dir/build.make CMakeFiles/curr.dir/build
 .PHONY : curr/fast
 
-main.o: main.cpp.o
-.PHONY : main.o
+include/PHE.o: include/PHE.cpp.o
+.PHONY : include/PHE.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/curr.dir/build.make CMakeFiles/curr.dir/main.cpp.o
-.PHONY : main.cpp.o
+include/PHE.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/curr.dir/build.make CMakeFiles/curr.dir/include/PHE.cpp.o
+.PHONY : include/PHE.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+include/PHE.i: include/PHE.cpp.i
+.PHONY : include/PHE.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/curr.dir/build.make CMakeFiles/curr.dir/main.cpp.i
-.PHONY : main.cpp.i
+include/PHE.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/curr.dir/build.make CMakeFiles/curr.dir/include/PHE.cpp.i
+.PHONY : include/PHE.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+include/PHE.s: include/PHE.cpp.s
+.PHONY : include/PHE.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/curr.dir/build.make CMakeFiles/curr.dir/main.cpp.s
-.PHONY : main.cpp.s
+include/PHE.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/curr.dir/build.make CMakeFiles/curr.dir/include/PHE.cpp.s
+.PHONY : include/PHE.cpp.s
+
+include/SHE.o: include/SHE.cpp.o
+.PHONY : include/SHE.o
+
+# target to build an object file
+include/SHE.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/curr.dir/build.make CMakeFiles/curr.dir/include/SHE.cpp.o
+.PHONY : include/SHE.cpp.o
+
+include/SHE.i: include/SHE.cpp.i
+.PHONY : include/SHE.i
+
+# target to preprocess a source file
+include/SHE.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/curr.dir/build.make CMakeFiles/curr.dir/include/SHE.cpp.i
+.PHONY : include/SHE.cpp.i
+
+include/SHE.s: include/SHE.cpp.s
+.PHONY : include/SHE.s
+
+# target to generate assembly for a file
+include/SHE.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/curr.dir/build.make CMakeFiles/curr.dir/include/SHE.cpp.s
+.PHONY : include/SHE.cpp.s
+
+test/main.o: test/main.cpp.o
+.PHONY : test/main.o
+
+# target to build an object file
+test/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/curr.dir/build.make CMakeFiles/curr.dir/test/main.cpp.o
+.PHONY : test/main.cpp.o
+
+test/main.i: test/main.cpp.i
+.PHONY : test/main.i
+
+# target to preprocess a source file
+test/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/curr.dir/build.make CMakeFiles/curr.dir/test/main.cpp.i
+.PHONY : test/main.cpp.i
+
+test/main.s: test/main.cpp.s
+.PHONY : test/main.s
+
+# target to generate assembly for a file
+test/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/curr.dir/build.make CMakeFiles/curr.dir/test/main.cpp.s
+.PHONY : test/main.cpp.s
 
 # Help Target
 help:
@@ -162,9 +210,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... curr"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... include/PHE.o"
+	@echo "... include/PHE.i"
+	@echo "... include/PHE.s"
+	@echo "... include/SHE.o"
+	@echo "... include/SHE.i"
+	@echo "... include/SHE.s"
+	@echo "... test/main.o"
+	@echo "... test/main.i"
+	@echo "... test/main.s"
 .PHONY : help
 
 

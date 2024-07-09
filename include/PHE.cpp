@@ -13,6 +13,53 @@ PublicKey* pk = NULL;
 BN_CTX* CTX = BN_CTX_new();
 
 /**
+ * @Method: 从文件中读取BIGNUMs
+ * @param filename 文件名
+ * @return vector<BIGNUM*> BIGNUMs列表
+ */
+vector<BIGNUM*> readBIGNUMsFromFile(const string &filename) {
+    vector<BIGNUM*> data_list;
+    ifstream infile(filename);
+    string line;
+    
+    while (getline(infile, line)) {
+        BIGNUM* bn = BN_new();
+        BN_dec2bn(&bn, line.c_str());
+        data_list.push_back(bn);
+    }
+
+    return data_list;
+}
+
+/**
+ * @Method: 从文件中读取BIGNUMs，产生两个列表
+ * @param string filename 文件名
+ * @param int lineNumber 行号
+ * @return vector<BIGNUM*> BIGNUMs列表
+ */
+vector<BIGNUM*> readBIGNUMsFromFile(const string &filename, int lineNumber) {
+    ifstream infile(filename);
+    string line;
+    vector<BIGNUM*> result;
+    int currentLine = 0;
+
+    while (getline(infile, line)) {
+        if (++currentLine == lineNumber) {
+            istringstream iss(line);
+            string number;
+            while (iss >> number) {
+                BIGNUM* bn = BN_new();
+                BN_dec2bn(&bn, number.c_str());
+                result.push_back(bn);
+            }
+            break;
+        }
+    }
+
+    return result;
+}
+
+/**
  * @Method: 计算算数平方根，结果向上取整
  * @param BIGNUM*  n 待开方的数
  * @return BIGNUM*  sqrt(n)
@@ -116,12 +163,12 @@ BIGNUM* encrypt_PHE(BIGNUM* m, PublicKey* pk) {
     // 计算m_prime = (r_1 * zero1_prime) mod N
     BN_mul(E_m, r_1, pk->get_zero1_prime(), CTX);
     BN_mod(E_m, E_m, N, CTX);
-    
+
     // 计算m_prime = (m_prime + m) mod N
     BN_add(E_m, E_m, m);
     BN_mod(E_m, E_m, N, CTX);
-    
-    
+
+
     // 计算temp = (r_2 * zero2_prime) mod N
     BN_mul(temp, r_2, pk->get_zero2_prime(), CTX);
     BN_mod(temp, temp, N, CTX);
@@ -922,4 +969,196 @@ vector<BIGNUM*> frequency_PHE(vector<BIGNUM*> x, int k) {
     BN_free(t);
 
     return frequency;
+}
+
+/**
+ * @Method: 总控处理程序
+ * @param algoName 调用的算法名称
+ * @param fileString 读取数据的地址
+ * @param resultFilePath 输出数据的地址
+ * @return 状态码，1：成功；0：失败
+ */
+int deal(string algoName,string fileString,string resultFilePath) {
+    if (algoName == "avg") {
+        vector<BIGNUM*> data_list = readBIGNUMsFromFile(fileString);
+        BIGNUM* avg = avg_PHE(data_list);
+
+        ofstream outfile(resultFilePath);
+        if (outfile.is_open()) {
+            char* bn_str = BN_bn2dec(avg);
+            outfile << bn_str << endl;
+            OPENSSL_free(bn_str);
+            outfile.close();
+        } else {
+            cerr << "Unable to open file " << resultFilePath << endl;
+            return 0;
+        }
+        return 1;
+    }  else if (algoName == "compare") {
+        vector<BIGNUM*> data_list = readBIGNUMsFromFile(fileString);
+        bool result = compare_PHE(data_list[0], data_list[1]);
+
+        ofstream outfile(resultFilePath);
+        if (outfile.is_open()) {
+            // 将result写入文件
+            outfile << result << endl;
+            outfile.close();
+        } else {
+            cerr << "Unable to open file " << resultFilePath << endl;
+            return 0;
+        }
+        return 1;
+    } else if (algoName == "equal") {
+        vector<BIGNUM*> data_list = readBIGNUMsFromFile(fileString);
+        bool result = equal_PHE(data_list[0], data_list[1]);
+
+        ofstream outfile(resultFilePath);
+        if (outfile.is_open()) {
+            // 将result写入文件
+            outfile << result << endl;
+            outfile.close();
+        } else {
+            cerr << "Unable to open file " << resultFilePath << endl;
+            return 0;
+        }
+        return 1;
+    } else if (algoName == "min_max") {
+        vector<BIGNUM*> data_list = readBIGNUMsFromFile(fileString);
+        BIGNUM* min = min_PHE(data_list, 0, data_list.size() - 1);
+        BIGNUM* max = max_PHE(data_list, 0, data_list.size() - 1);
+
+        ofstream outfile(resultFilePath);
+        if (outfile.is_open()) {
+            char* bn_str = BN_bn2dec(min);
+            outfile << "min = " << bn_str << endl;
+            bn_str = BN_bn2dec(max);
+            outfile << "max = " << bn_str << endl;
+            OPENSSL_free(bn_str);
+            outfile.close();
+        } else {
+            cerr << "Unable to open file " << resultFilePath << endl;
+            return 0;
+        }
+        return 1;
+    } else if (algoName == "include") {
+        vector<BIGNUM*> data_list = readBIGNUMsFromFile(fileString);
+        bool result = include_PHE(data_list[0], data_list[1], data_list[2]);
+
+        ofstream outfile(resultFilePath);
+        if (outfile.is_open()) {
+            // 将result写入文件
+            outfile << result << endl;
+            outfile.close();
+        } else {
+            cerr << "Unable to open file " << resultFilePath << endl;
+            return 0;
+        }
+        return 1;
+    } else if (algoName == "intersect") {
+        vector<BIGNUM*> data_list = readBIGNUMsFromFile(fileString);
+        bool result = intersect_PHE(data_list[0], data_list[1], data_list[2], data_list[3]);
+
+        ofstream outfile(resultFilePath);
+        if (outfile.is_open()) {
+            // 将result写入文件
+            outfile << result << endl;
+            outfile.close();
+        } else {
+            cerr << "Unable to open file " << resultFilePath << endl;
+            return 0;
+        }
+        return 1;
+    } else if (algoName == "inner_product") {
+        vector<vector<BIGNUM*>> data_list(2);
+        data_list[0] = readBIGNUMsFromFile(fileString, 1);
+        data_list[1] = readBIGNUMsFromFile(fileString, 2);
+        BIGNUM* result = inner_product_PHE(data_list[0], data_list[1]);
+
+        ofstream outfile(resultFilePath);
+        if (outfile.is_open()) {
+            char* bn_str = BN_bn2dec(result);
+            outfile << bn_str << endl;
+            OPENSSL_free(bn_str);
+            outfile.close();
+        } else {
+            cerr << "Unable to open file " << resultFilePath << endl;
+            return 0;
+        }
+        return 1;
+    } else if (algoName == "distance") {
+        vector<vector<BIGNUM*>> data_list(2);
+        data_list[0] = readBIGNUMsFromFile(fileString, 1);
+        data_list[1] = readBIGNUMsFromFile(fileString, 2);
+        BIGNUM* result = distance_PHE(data_list[0], data_list[1]);
+
+        ofstream outfile(resultFilePath);
+        if (outfile.is_open()) {
+            char* bn_str = BN_bn2dec(result);
+            outfile << bn_str << endl;
+            OPENSSL_free(bn_str);
+            outfile.close();
+        } else {
+            cerr << "Unable to open file " << resultFilePath << endl;
+            return 0;
+        }
+        return 1;
+    } else if (algoName == "split") {
+        vector<vector<BIGNUM*>> data_list(2);
+        data_list[0] = readBIGNUMsFromFile(fileString, 1);
+        data_list[1] = readBIGNUMsFromFile(fileString, 2);
+        // 将data_list[0][0]转化为int类型
+        int k = static_cast<int>(BN_get_word(data_list[0][0]));
+        vector<Bin> box = split_PHE(data_list[1], k);
+
+        ofstream outfile(resultFilePath);
+        if (outfile.is_open()) {
+            char* bn_str;
+
+            for (int i = 0; i < box.size(); i++) {
+                bn_str = BN_bn2dec(box[i].lower);
+                outfile << "lower: " << bn_str << endl;
+                bn_str = BN_bn2dec(box[i].upper);
+                outfile << "upper: " << bn_str << endl;
+
+                outfile << "box[" << i << "].elements: ";;
+                for (int j = 0; j < box[i].elements.size(); j++) {
+                    bn_str = BN_bn2dec(box[i].elements[j]);
+                    outfile << bn_str << " ";
+                }
+                outfile << endl;
+            }
+            OPENSSL_free(bn_str);
+            outfile.close();
+        } else {
+            cerr << "Unable to open file " << resultFilePath << endl;
+            return 0;
+        }
+        return 1;
+    } else if (algoName == "frequency") {
+        vector<vector<BIGNUM*>> data_list(2);
+        data_list[0] = readBIGNUMsFromFile(fileString, 1);
+        data_list[1] = readBIGNUMsFromFile(fileString, 2);
+        // 将data_list[0][0]转化为int类型
+        int k = static_cast<int>(BN_get_word(data_list[0][0]));
+        vector<BIGNUM*> result = frequency_PHE(data_list[1], k);
+
+        ofstream outfile(resultFilePath);
+        if (outfile.is_open()) {
+            char* bn_str;
+
+            for (int i = 0; i < result.size(); i++) {
+                bn_str = BN_bn2dec(result[i]);
+                outfile << bn_str << " ";
+            }
+            OPENSSL_free(bn_str);
+            outfile.close();
+        } else {
+            cerr << "Unable to open file " << resultFilePath << endl;
+            return 0;
+        }
+        return 1;
+    }
+
+    cerr << "Unable to find fileString " << resultFilePath << endl;
+    return 0;
 }

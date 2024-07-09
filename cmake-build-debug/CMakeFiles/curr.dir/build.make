@@ -69,31 +69,65 @@ include CMakeFiles/curr.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/curr.dir/flags.make
 
-CMakeFiles/curr.dir/main.cpp.o: CMakeFiles/curr.dir/flags.make
-CMakeFiles/curr.dir/main.cpp.o: /tmp/tmp.4horwKsbPl/main.cpp
-CMakeFiles/curr.dir/main.cpp.o: CMakeFiles/curr.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/tmp/tmp.4horwKsbPl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/curr.dir/main.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/curr.dir/main.cpp.o -MF CMakeFiles/curr.dir/main.cpp.o.d -o CMakeFiles/curr.dir/main.cpp.o -c /tmp/tmp.4horwKsbPl/main.cpp
+CMakeFiles/curr.dir/include/PHE.cpp.o: CMakeFiles/curr.dir/flags.make
+CMakeFiles/curr.dir/include/PHE.cpp.o: /tmp/tmp.4horwKsbPl/include/PHE.cpp
+CMakeFiles/curr.dir/include/PHE.cpp.o: CMakeFiles/curr.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/tmp/tmp.4horwKsbPl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/curr.dir/include/PHE.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/curr.dir/include/PHE.cpp.o -MF CMakeFiles/curr.dir/include/PHE.cpp.o.d -o CMakeFiles/curr.dir/include/PHE.cpp.o -c /tmp/tmp.4horwKsbPl/include/PHE.cpp
 
-CMakeFiles/curr.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/curr.dir/main.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/tmp.4horwKsbPl/main.cpp > CMakeFiles/curr.dir/main.cpp.i
+CMakeFiles/curr.dir/include/PHE.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/curr.dir/include/PHE.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/tmp.4horwKsbPl/include/PHE.cpp > CMakeFiles/curr.dir/include/PHE.cpp.i
 
-CMakeFiles/curr.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/curr.dir/main.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/tmp.4horwKsbPl/main.cpp -o CMakeFiles/curr.dir/main.cpp.s
+CMakeFiles/curr.dir/include/PHE.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/curr.dir/include/PHE.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/tmp.4horwKsbPl/include/PHE.cpp -o CMakeFiles/curr.dir/include/PHE.cpp.s
+
+CMakeFiles/curr.dir/include/SHE.cpp.o: CMakeFiles/curr.dir/flags.make
+CMakeFiles/curr.dir/include/SHE.cpp.o: /tmp/tmp.4horwKsbPl/include/SHE.cpp
+CMakeFiles/curr.dir/include/SHE.cpp.o: CMakeFiles/curr.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/tmp/tmp.4horwKsbPl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/curr.dir/include/SHE.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/curr.dir/include/SHE.cpp.o -MF CMakeFiles/curr.dir/include/SHE.cpp.o.d -o CMakeFiles/curr.dir/include/SHE.cpp.o -c /tmp/tmp.4horwKsbPl/include/SHE.cpp
+
+CMakeFiles/curr.dir/include/SHE.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/curr.dir/include/SHE.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/tmp.4horwKsbPl/include/SHE.cpp > CMakeFiles/curr.dir/include/SHE.cpp.i
+
+CMakeFiles/curr.dir/include/SHE.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/curr.dir/include/SHE.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/tmp.4horwKsbPl/include/SHE.cpp -o CMakeFiles/curr.dir/include/SHE.cpp.s
+
+CMakeFiles/curr.dir/test/main.cpp.o: CMakeFiles/curr.dir/flags.make
+CMakeFiles/curr.dir/test/main.cpp.o: /tmp/tmp.4horwKsbPl/test/main.cpp
+CMakeFiles/curr.dir/test/main.cpp.o: CMakeFiles/curr.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/tmp/tmp.4horwKsbPl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/curr.dir/test/main.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/curr.dir/test/main.cpp.o -MF CMakeFiles/curr.dir/test/main.cpp.o.d -o CMakeFiles/curr.dir/test/main.cpp.o -c /tmp/tmp.4horwKsbPl/test/main.cpp
+
+CMakeFiles/curr.dir/test/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/curr.dir/test/main.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/tmp.4horwKsbPl/test/main.cpp > CMakeFiles/curr.dir/test/main.cpp.i
+
+CMakeFiles/curr.dir/test/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/curr.dir/test/main.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/tmp.4horwKsbPl/test/main.cpp -o CMakeFiles/curr.dir/test/main.cpp.s
 
 # Object files for target curr
 curr_OBJECTS = \
-"CMakeFiles/curr.dir/main.cpp.o"
+"CMakeFiles/curr.dir/include/PHE.cpp.o" \
+"CMakeFiles/curr.dir/include/SHE.cpp.o" \
+"CMakeFiles/curr.dir/test/main.cpp.o"
 
 # External object files for target curr
 curr_EXTERNAL_OBJECTS =
 
-curr: CMakeFiles/curr.dir/main.cpp.o
+curr: CMakeFiles/curr.dir/include/PHE.cpp.o
+curr: CMakeFiles/curr.dir/include/SHE.cpp.o
+curr: CMakeFiles/curr.dir/test/main.cpp.o
 curr: CMakeFiles/curr.dir/build.make
+curr: /usr/lib/aarch64-linux-gnu/libssl.so
+curr: /usr/lib/aarch64-linux-gnu/libcrypto.so
 curr: CMakeFiles/curr.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/tmp/tmp.4horwKsbPl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable curr"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/tmp/tmp.4horwKsbPl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable curr"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/curr.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
