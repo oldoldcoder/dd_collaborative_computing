@@ -1,13 +1,4 @@
-/usr/local/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/usr/bin/make -DCMAKE_C_COMPILER=/usr/bin/gcc -DCMAKE_CXX_COMPILER=/usr/bin/g++ -G "CodeBlocks - Unix Makefiles" -S /tmp/tmp.4horwKsbPl -B /tmp/tmp.4horwKsbPl/cmake-build-debug
-CMake Deprecation Warning:
-  Support for "Extra Generators" like
-
-    CodeBlocks
-
-  is deprecated and will be removed from a future version of CMake.  IDEs may
-  use the cmake-file-api(7) to view CMake-generated project build trees.
-
-
--- Configuring done (0.0s)
--- Generating done (0.0s)
--- Build files have been written to: /tmp/tmp.4horwKsbPl/cmake-build-debug
+"D:\software\codingSoft\CLion 2023.1.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" -S D:\study\code\ClionProject\dd_collaborative_computing -B D:\study\code\ClionProject\dd_collaborative_computing\cmake-build-debug
+-- Configuring done
+-- Generating done
+-- Build files have been written to: D:/study/code/ClionProject/dd_collaborative_computing/cmake-build-debug

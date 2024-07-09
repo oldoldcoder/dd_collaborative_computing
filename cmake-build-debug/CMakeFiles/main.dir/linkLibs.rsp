@@ -1,0 +1,1 @@
+ D:\software\lib\OpenSSL\lib\vc\x64\MT\libssl_static.lib D:\software\lib\OpenSSL\lib\vc\x64\MT\libcrypto_static.lib -lws2_32 -lCrypt32 -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

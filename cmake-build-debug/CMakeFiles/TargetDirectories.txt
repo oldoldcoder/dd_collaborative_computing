@@ -1,0 +1,3 @@
+D:/study/code/ClionProject/dd_collaborative_computing/cmake-build-debug/CMakeFiles/dd_cComputing.dir
+D:/study/code/ClionProject/dd_collaborative_computing/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/study/code/ClionProject/dd_collaborative_computing/cmake-build-debug/CMakeFiles/rebuild_cache.dir

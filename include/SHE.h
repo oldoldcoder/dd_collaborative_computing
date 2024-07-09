@@ -7,7 +7,8 @@
 #ifndef SHE_H
 #define SHE_H
 
-#include <bits/stdc++.h>
+#include<vector>
+#include<string>
 #include <openssl/bn.h>
 using namespace std;
 

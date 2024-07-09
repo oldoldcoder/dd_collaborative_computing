@@ -1,0 +1,3 @@
+"D:\software\codingSoft\CLion 2023.1.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\dd_cComputing.dir/objects.a
+"D:\software\codingSoft\CLion 2023.1.2\bin\mingw\bin\ar.exe" qc CMakeFiles\dd_cComputing.dir/objects.a @CMakeFiles\dd_cComputing.dir\objects1
+"D:\software\codingSoft\CLion 2023.1.2\bin\mingw\bin\g++.exe"  -Wall -g -shared -o libdd_cComputing.dll -Wl,--out-implib,libdd_cComputing.dll.a -Wl,--major-image-version,0,--minor-image-version,0 -Wl,--whole-archive CMakeFiles\dd_cComputing.dir/objects.a -Wl,--no-whole-archive @CMakeFiles\dd_cComputing.dir\linkLibs.rsp

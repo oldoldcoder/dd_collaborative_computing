@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="dd_cComputing"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="D:/study/code/ClionProject/dd_collaborative_computing/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/software/codingSoft/CLion 2023.1.2/bin/mingw/bin/mingw32-make.exe -f &quot;D:/study/code/ClionProject/dd_collaborative_computing/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="D:/software/codingSoft/CLion 2023.1.2/bin/mingw/bin/mingw32-make.exe -f &quot;D:/study/code/ClionProject/dd_collaborative_computing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/software/codingSoft/CLion 2023.1.2/bin/mingw/bin/mingw32-make.exe -f &quot;D:/study/code/ClionProject/dd_collaborative_computing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/software/codingSoft/CLion 2023.1.2/bin/mingw/bin/mingw32-make.exe -f &quot;D:/study/code/ClionProject/dd_collaborative_computing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="dd_cComputing">
+				<Option output="D:/study/code/ClionProject/dd_collaborative_computing/cmake-build-debug/libdd_cComputing.dll" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/study/code/ClionProject/dd_collaborative_computing/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/study/code/ClionProject/dd_collaborative_computing/include"/>
+					<Add directory="D:/software/lib/OpenSSL/include"/>
+					<Add directory="D:/software/codingSoft/CLion 2023.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"/>
+					<Add directory="D:/software/codingSoft/CLion 2023.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="D:/software/codingSoft/CLion 2023.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"/>
+					<Add directory="D:/software/codingSoft/CLion 2023.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="D:/software/codingSoft/CLion 2023.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="D:/software/codingSoft/CLion 2023.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="D:/software/codingSoft/CLion 2023.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/software/codingSoft/CLion 2023.1.2/bin/mingw/bin/mingw32-make.exe -f &quot;D:/study/code/ClionProject/dd_collaborative_computing/cmake-build-debug/Makefile&quot;  VERBOSE=1 dd_cComputing"/>
+					<CompileFile command="D:/software/codingSoft/CLion 2023.1.2/bin/mingw/bin/mingw32-make.exe -f &quot;D:/study/code/ClionProject/dd_collaborative_computing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/software/codingSoft/CLion 2023.1.2/bin/mingw/bin/mingw32-make.exe -f &quot;D:/study/code/ClionProject/dd_collaborative_computing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/software/codingSoft/CLion 2023.1.2/bin/mingw/bin/mingw32-make.exe -f &quot;D:/study/code/ClionProject/dd_collaborative_computing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="dd_cComputing/fast">
+				<Option output="D:/study/code/ClionProject/dd_collaborative_computing/cmake-build-debug/libdd_cComputing.dll" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/study/code/ClionProject/dd_collaborative_computing/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/study/code/ClionProject/dd_collaborative_computing/include"/>
+					<Add directory="D:/software/lib/OpenSSL/include"/>
+					<Add directory="D:/software/codingSoft/CLion 2023.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"/>
+					<Add directory="D:/software/codingSoft/CLion 2023.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="D:/software/codingSoft/CLion 2023.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"/>
+					<Add directory="D:/software/codingSoft/CLion 2023.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="D:/software/codingSoft/CLion 2023.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="D:/software/codingSoft/CLion 2023.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="D:/software/codingSoft/CLion 2023.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/software/codingSoft/CLion 2023.1.2/bin/mingw/bin/mingw32-make.exe -f &quot;D:/study/code/ClionProject/dd_collaborative_computing/cmake-build-debug/Makefile&quot;  VERBOSE=1 dd_cComputing/fast"/>
+					<CompileFile command="D:/software/codingSoft/CLion 2023.1.2/bin/mingw/bin/mingw32-make.exe -f &quot;D:/study/code/ClionProject/dd_collaborative_computing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/software/codingSoft/CLion 2023.1.2/bin/mingw/bin/mingw32-make.exe -f &quot;D:/study/code/ClionProject/dd_collaborative_computing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/software/codingSoft/CLion 2023.1.2/bin/mingw/bin/mingw32-make.exe -f &quot;D:/study/code/ClionProject/dd_collaborative_computing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="D:/study/code/ClionProject/dd_collaborative_computing/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/software/codingSoft/CLion 2023.1.2/bin/mingw/bin/mingw32-make.exe -f &quot;D:/study/code/ClionProject/dd_collaborative_computing/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="D:/software/codingSoft/CLion 2023.1.2/bin/mingw/bin/mingw32-make.exe -f &quot;D:/study/code/ClionProject/dd_collaborative_computing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/software/codingSoft/CLion 2023.1.2/bin/mingw/bin/mingw32-make.exe -f &quot;D:/study/code/ClionProject/dd_collaborative_computing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/software/codingSoft/CLion 2023.1.2/bin/mingw/bin/mingw32-make.exe -f &quot;D:/study/code/ClionProject/dd_collaborative_computing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="D:/study/code/ClionProject/dd_collaborative_computing/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/software/codingSoft/CLion 2023.1.2/bin/mingw/bin/mingw32-make.exe -f &quot;D:/study/code/ClionProject/dd_collaborative_computing/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="D:/software/codingSoft/CLion 2023.1.2/bin/mingw/bin/mingw32-make.exe -f &quot;D:/study/code/ClionProject/dd_collaborative_computing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/software/codingSoft/CLion 2023.1.2/bin/mingw/bin/mingw32-make.exe -f &quot;D:/study/code/ClionProject/dd_collaborative_computing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/software/codingSoft/CLion 2023.1.2/bin/mingw/bin/mingw32-make.exe -f &quot;D:/study/code/ClionProject/dd_collaborative_computing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="D:/study/code/ClionProject/dd_collaborative_computing/include/PHE.cpp">
+			<Option target="dd_cComputing"/>
+		</Unit>
+		<Unit filename="D:/study/code/ClionProject/dd_collaborative_computing/include/PHE.h">
+			<Option target="dd_cComputing"/>
+		</Unit>
+		<Unit filename="D:/study/code/ClionProject/dd_collaborative_computing/include/SHE.cpp">
+			<Option target="dd_cComputing"/>
+		</Unit>
+		<Unit filename="D:/study/code/ClionProject/dd_collaborative_computing/include/SHE.h">
+			<Option target="dd_cComputing"/>
+		</Unit>
+		<Unit filename="D:/study/code/ClionProject/dd_collaborative_computing/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

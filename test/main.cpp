@@ -149,7 +149,7 @@ void test_avg_PHE() {
     // 计算均值
     avg = avg_PHE(data_list);
     cout << "avg: " << BN_bn2dec(avg) << endl;
-    printTime(start,"计算均值");
+    printTime(start,"computing value of avg");
 
     avg_test /= 100000;
     cout << "avg_test: " << avg_test << endl;
@@ -167,7 +167,7 @@ void test_compare_PHE() {
 
     cout <<  "compare_PHE(x1, x2) = " << compare_PHE(x1, x2) << endl;
 
-    printTime(start,"计算数据比较");
+    printTime(start,"111");
 }
 
 // 相等性测试
@@ -180,7 +180,7 @@ void test_equal_PHE() {
 
     clock_t start = clock();
     cout <<  "equal_PHE(x1, x2) = " << equal_PHE(x1, x2) << endl;
-    printTime(start,"判断数据相等性");
+    printTime(start,"111");
 }
 
 // 测试求最小值
@@ -204,7 +204,7 @@ void test_min_PHE() {
 
     cout << "min: " << BN_bn2dec(min) << endl;
 
-    printTime(start,"计算100000个数据最小值");
+    printTime(start,"1111");
 }
 
 // 测试求最大值
@@ -227,7 +227,7 @@ void test_max_PHE() {
     BIGNUM* max = max_PHE(datas, 0, datas.size() - 1);
 
     cout << "max: " << BN_bn2dec(max) << endl;
-    printTime(start,"计算100000个数据最大值");
+    printTime(start,"1111");
 }
 
 // 测试包含关系
@@ -244,7 +244,7 @@ void test_include_PHE() {
 
     clock_t start = clock();
     cout <<  include_PHE(x, y1, y2) << endl;
-    printTime(start,"测试包含关系");
+    printTime(start,"1111");
 
 }
 
@@ -262,7 +262,7 @@ void test_intersect_PHE() {
 
     clock_t start = clock();
     cout <<  intersect_PHE(x1, x2, y1, y2) << endl;
-    printTime(start,"测试范围相交");
+    printTime(start,"111");
 }
 
 // 测试内积
@@ -289,7 +289,7 @@ void test_inner_product_PHE() {
     clock_t start = clock();
     BIGNUM* inner_product = inner_product_PHE(x1, x2);
     cout << "inner_product: " << BN_bn2dec(inner_product) << endl;
-    printTime(start,"测试内积");
+    printTime(start,"11111");
 }
 
 // 测试欧氏距离
@@ -316,7 +316,7 @@ void test_distance_PHE() {
     clock_t start = clock();
     BIGNUM* distance = distance_PHE(x1, x2);
     cout << "distance: " << BN_bn2dec(distance) << endl;
-    printTime(start,"欧氏距离");
+    printTime(start,"1111");
 }
 
 // 测试数据分箱
@@ -347,7 +347,7 @@ void test_bin_PHE() {
         cout << endl;
         cout << "----------------" << endl;
     }
-    printTime(start,"测试数据分箱");
+    printTime(start,"1111");
 }
 
 // 测试频率计算
@@ -372,15 +372,12 @@ void test_frequency_PHE() {
     }
 
     cout << endl;
-    printTime(start,"计算频率");
+    printTime(start,"11111");
 }
 
 void test_deal() {
-    string algoName = "frequency";
-    string fileString = "/root/wty/data.txt";
-    string resultFilePath = "/root/wty/result.txt";
+    deal("avg", "D:\\study\\code\\github_project\\JNA_privacy_tools\\data\\avg\\data.txt", "D:\\study\\code\\github_project\\JNA_privacy_tools\\data\\avg\\res.txt");
 
-    deal(algoName, fileString, resultFilePath);
 }
 
 int main() {

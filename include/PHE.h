@@ -8,123 +8,147 @@
 #ifndef PHE_H
 #define PHE_H
 
-#include <bits/stdc++.h>
+#include<vector>
+#include<string>
+
 #include <openssl/bn.h>
+
+#ifdef _WIN32
+#define EXPORT_SYMBOL __declspec(dllexport)
+#else
+#define EXPORT_SYMBOL __attribute__((visibility("default")))
+#endif
+
+/**
+ * @Method: 总控处理程序
+ * @param algoName 调用的算法名称
+ * @param fileString 读取数据的地址
+ * @param resultFilePath 输出数据的地址
+ * @return 状态码，1：成功；0：失败
+ */
+#ifdef __cplusplus
+extern "C" {
+#endif // __cplusplus
+	EXPORT_SYMBOL int deal(char* algoName, char* fileString, char* resultFilePath);
+#ifdef __cplusplus
+}
+#endif
+
 using namespace std;
 
 // 设计一个公钥类
 class PublicKey {
 public:
-    // 构造函数
-    PublicKey(int k_M, int k_r, int k_L, int k_p, int k_q, BIGNUM* N, BIGNUM* zero1_prime, BIGNUM* zero2_prime) {
-        this->k_M = k_M;
-        this->k_r = k_r;
-        this->k_L = k_L;
-        this->k_p = k_p;
-        this->k_q = k_q;
-        this->N = BN_dup(N);
-        this->zero1_prime = BN_dup(zero1_prime);
-        this->zero2_prime = BN_dup(zero2_prime);
-    }
+	// 构造函数
+	PublicKey(int k_M, int k_r, int k_L, int k_p, int k_q, BIGNUM* N, BIGNUM* zero1_prime, BIGNUM* zero2_prime) {
+		this->k_M = k_M;
+		this->k_r = k_r;
+		this->k_L = k_L;
+		this->k_p = k_p;
+		this->k_q = k_q;
+		this->N = BN_dup(N);
+		this->zero1_prime = BN_dup(zero1_prime);
+		this->zero2_prime = BN_dup(zero2_prime);
+	}
 
-    int get_k_M() {
-        return k_M;
-    }
+	int get_k_M() {
+		return k_M;
+	}
 
-    int get_k_r() {
-        return k_r;
-    }
+	int get_k_r() {
+		return k_r;
+	}
 
-    int get_k_L() {
-        return k_L;
-    }
+	int get_k_L() {
+		return k_L;
+	}
 
-    int get_k_p() {
-        return k_p;
-    }
+	int get_k_p() {
+		return k_p;
+	}
 
-    int get_k_q() {
-        return k_q;
-    }
+	int get_k_q() {
+		return k_q;
+	}
 
-    BIGNUM* get_N() {
-        return BN_dup(N);
-    }
+	BIGNUM* get_N() {
+		return BN_dup(N);
+	}
 
-    BIGNUM* get_zero1_prime() {
-        return BN_dup(zero1_prime);
-    }
+	BIGNUM* get_zero1_prime() {
+		return BN_dup(zero1_prime);
+	}
 
-    BIGNUM* get_zero2_prime() {
-        return BN_dup(zero2_prime);
-    }
+	BIGNUM* get_zero2_prime() {
+		return BN_dup(zero2_prime);
+	}
 
-    ~PublicKey() {
-        BN_free(N);
-        BN_free(zero1_prime);
-        BN_free(zero2_prime);
-    }
+	~PublicKey() {
+		BN_free(N);
+		BN_free(zero1_prime);
+		BN_free(zero2_prime);
+	}
 
 private:
-    int k_M;
-    int k_r;
-    int k_L;
-    int k_p;
-    int k_q;
-    BIGNUM* N;
-    BIGNUM* zero1_prime;
-    BIGNUM* zero2_prime;
+	int k_M;
+	int k_r;
+	int k_L;
+	int k_p;
+	int k_q;
+	BIGNUM* N;
+	BIGNUM* zero1_prime;
+	BIGNUM* zero2_prime;
 };
 
 // 定义数据拥有者
 class DO {
 public:
-    // 构造函数
-    DO(BIGNUM* x, PublicKey* pk, PrivateKey* sk) {
-        this->x = BN_dup(x);
-        this->pk = pk;
-        this->sk = sk;
-    }
+	// 构造函数
+	DO(BIGNUM* x, PublicKey* pk, PrivateKey* sk) {
+		this->x = BN_dup(x);
+		this->pk = pk;
+		this->sk = sk;
+	}
 
-    BIGNUM* get_x() {
-        return BN_dup(x);
-    }
+	BIGNUM* get_x() {
+		return BN_dup(x);
+	}
 
-    PublicKey* get_pk() {
-        return new PublicKey(*pk);
-    }
+	PublicKey* get_pk() {
+		return new PublicKey(*pk);
+	}
 
-    PrivateKey* get_sk() {
-        return new PrivateKey(*sk);
-    }
+	PrivateKey* get_sk() {
+		return new PrivateKey(*sk);
+	}
 
-    void set_x(BIGNUM* x) {
-        this->x = BN_dup(x);
-    }
+	void set_x(BIGNUM* x) {
+		this->x = BN_dup(x);
+	}
 
-    void set_pk(PublicKey* pk) {
-        this->pk = pk;
-    }
+	void set_pk(PublicKey* pk) {
+		this->pk = pk;
+	}
 
-    void set_sk(PrivateKey* sk) {
-        this->sk = sk;
-    }
+	void set_sk(PrivateKey* sk) {
+		this->sk = sk;
+	}
 
-    ~DO() {
-        BN_free(x);
-        delete pk;
-        delete sk;
-    }
+	~DO() {
+		BN_free(x);
+		delete pk;
+		delete sk;
+	}
 
 private:
-    // 持有的数据
-    BIGNUM* x;
+	// 持有的数据
+	BIGNUM* x;
 
-    // 持有公钥
-    PublicKey* pk;
+	// 持有公钥
+	PublicKey* pk;
 
-    // 持有私钥
-    PrivateKey* sk;
+	// 持有私钥
+	PrivateKey* sk;
 };
 
 // 声明公钥指针
@@ -132,11 +156,11 @@ extern PublicKey* pk;
 
 // 定义分箱的结构体
 struct Bin {
-    // 定义分箱范围
-    BIGNUM* lower;
-    BIGNUM* upper;
-    // 定义分箱存储的元素
-    vector<BIGNUM*> elements;
+	// 定义分箱范围
+	BIGNUM* lower;
+	BIGNUM* upper;
+	// 定义分箱存储的元素
+	vector<BIGNUM*> elements;
 };
 
 /**
@@ -266,13 +290,6 @@ vector<Bin> split_PHE(vector<BIGNUM*> x, int k);
  */
 vector<BIGNUM*> frequency_PHE(vector<BIGNUM*> x, int k);
 
-/**
- * @Method: 总控处理程序
- * @param algoName 调用的算法名称
- * @param fileString 读取数据的地址
- * @param resultFilePath 输出数据的地址
- * @return 状态码，1：成功；0：失败
- */
-int deal(string algoName,string fileString,string resultFilePath);
+
 
 #endif //PHE_H
